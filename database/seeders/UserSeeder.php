@@ -26,11 +26,15 @@ class UserSeeder extends Seeder
             ]);
         }
 
-        // Create a few Employee Users
+        // Create Employee User
         $employeeRole = Role::where('name', 'Employee')->first();
         if ($employeeRole) {
-            User::factory()->count(5)->create([
+            User::create([
+                'name' => 'Employee User',
+                'email' => 'employee@example.com',
+                'password' => Hash::make('password'),
                 'role_id' => $employeeRole->id,
+                'leave_quota' => 12,
             ]);
         }
     }

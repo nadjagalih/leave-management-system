@@ -115,12 +115,13 @@ Jalankan perintah berikut untuk membuat tabel database dan mengisi data awal (ro
 php artisan migrate:fresh --seed
 ```
 
-Perintah ini akan menghapus semua tabel lama dan menjalankan seeder. Seeder akan membuat:
--   Dua peran: `Admin` dan `Employee`.
--   Satu pengguna **Admin**:
+Perintah ini akan menghapus semua tabel lama dan menjalankan seeder. Seeder akan membuat data awal berikut:
+
+-   **Peran**: `Admin` dan `Employee`.
+-   **Pengguna Admin**:
     -   Email: `admin@example.com`
     -   Password: `password`
--   Satu pengguna **Employee**:
+-   **Pengguna Employee**:
     -   Email: `employee@example.com`
     -   Password: `password`
 
